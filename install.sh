@@ -9,7 +9,7 @@ THEME_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 
 echo "instalando meus pacotes"
-sudo pacman -S --needed starship kitty fastfetch 
+sudo pacman -S --needed starship kitty fastfetch okular
 
 echo "removendo instalação anterior do tema (se existir)..."
 rm -rf "$dest_dirfast"
