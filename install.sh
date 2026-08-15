@@ -2,8 +2,8 @@
 
 namefast="fastfetch"
 namekitty="kitty"
-dest_dirfast="/home/kaua/.config/${namefast}"
-dest_dirkitty="/home/kaua/.config/${namekitty}"
+dest_dirfast="/home/$USER/.config/${namefast}"
+dest_dirkitty="/home/$USER/.config/${namekitty}"
 
 THEME_DIR="$(cd "$(dirname "$0")" && pwd)"
 
