@@ -5,6 +5,7 @@ namekitty="kitty"
 dest_dirfast="/home/$USER/.config/${namefast}"
 dest_dirkitty="/home/$USER/.config/${namekitty}"
 dest_starship="/home/$USER/.config/"
+dest_starcommand="/home/$USER/.config/fish/config.fish"
 
 THEME_DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -21,6 +22,11 @@ echo "copiando arquivos para .config"
 cp -r "$THEME_DIR/fastfetch" "$dest_dirfast"
 cp -r "$THEME_DIR/kitty"     "$dest_dirkitty"
 cp -r "$THEME_DIR/starship.toml"     "$dest_starship"
+conteudo_atual=$(sed -n '3p' "$dest_starcommand")
+
+echo "O que está na linha 3 atualmente é: '$conteudo_atual'"
+
+sed -i '3c\starship init fish | source ' "$dest_starcommand"
 
 : '
 kwriteconfig6 --file kdeglobals --group General --key TerminalApplication kitty
@@ -42,6 +48,9 @@ fi
 
 
 echo "concluido!"
+
+
+##starship init fish | source
 
 
 
