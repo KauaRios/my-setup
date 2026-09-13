@@ -1,0 +1,85 @@
+# ── Layout ───────────────────────────────────────────────
+format = """
+[╭─](fg:active_red)\
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$cmd_duration\
+[─╮](fg:active_red)
+[╰─](fg:active_red)$character\
+"""
+
+palette = "caveirao"
+
+[palettes.caveirao]
+dark_bg    = "#0a0a0a"
+deep_grey  = "#1a1a1a"
+medium_grey = "#444444"
+bone_white = "#e0e0e0"
+active_red = "#ff4444"
+dark_red   = "#771111"
+beige_light = "#dcdccc"
+
+# ── OS ───────────────────────────────────────────────────
+[os]
+disabled = false
+format = "[ $symbol ](bg:deep_grey fg:active_red)"
+
+[os.symbols]
+Arch      = "󰣇"
+Linux     = "󰌽"
+
+# ── Username ─────────────────────────────────────────────
+[username]
+show_always = true
+format = "[  $user ](bg:dark_bg fg:bone_white)"
+
+# ── Directory ────────────────────────────────────────────
+[directory]
+format = "[ 󰉋 $path ](bg:deep_grey fg:beige_light)"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " 󰌾"
+read_only_style = "fg:active_red"
+
+# ── Git branch ───────────────────────────────────────────
+[git_branch]
+format = "[ $symbol$branch ](bg:dark_bg fg:medium_grey)"
+symbol = "󰊢 "
+
+# ── Git status ───────────────────────────────────────────
+[git_status]
+format = "([ $all_status$ahead_behind ](bg:dark_bg fg:active_red))"
+conflicted = "󰗖 "
+ahead      = "⇡${count}"
+behind     = "⇣${count}"
+untracked  = "? "
+modified   = "~ "
+staged     = "+ "
+deleted    = "✗ "
+
+# ── Languages ────────────────────────────────────────────
+[python]
+format = "[ 󰌠 $version ](bg:deep_grey fg:bone_white)"
+
+[nodejs]
+format = "[ 󰎙 $version ](bg:deep_grey fg:bone_white)"
+
+[rust]
+format = "[ 󱘗 $version ](bg:deep_grey fg:bone_white)"
+
+# ── Tempo de execução ────────────────────────────────────
+[cmd_duration]
+format = "[ 󱦟 $duration ](fg:medium_grey)"
+min_time = 2_000
+
+# ── Caractere do prompt ──────────────────────────────────
+[character]
+success_symbol = "[ 󰁔](bold fg:active_red)"
+error_symbol   = "[ 󰁔](bold fg:dark_red)"
+vimcmd_symbol  = "[ 󰁔](bold fg:medium_grey)"

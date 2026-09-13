@@ -4,12 +4,13 @@ namefast="fastfetch"
 namekitty="kitty"
 dest_dirfast="/home/$USER/.config/${namefast}"
 dest_dirkitty="/home/$USER/.config/${namekitty}"
+dest_starship="/home/$USER/.config/"
 
 THEME_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 
 echo "instalando meus pacotes"
-sudo pacman -S --needed starship kitty fastfetch okular
+sudo pacman -S --needed starship kitty fastfetch okular docker docker-compose starship
 
 echo "removendo instalação anterior do tema (se existir)..."
 rm -rf "$dest_dirfast"
@@ -19,6 +20,7 @@ echo "copiando arquivos para .config"
 
 cp -r "$THEME_DIR/fastfetch" "$dest_dirfast"
 cp -r "$THEME_DIR/kitty"     "$dest_dirkitty"
+cp -r "$THEME_DIR/starship.toml"     "$dest_starship"
 
 : '
 kwriteconfig6 --file kdeglobals --group General --key TerminalApplication kitty
