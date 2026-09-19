@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "source": "~/.config/fastfetch/assets/pngegg.png",
+    "source": "~/.config/fastfetch/assets/logo_green.png",
     "type": "kitty",
     "padding": {
       "top": 0,
@@ -10,90 +10,82 @@
     "width": 24,
     "height": 20
   },
-
   "display": {
-    "separator": " "
+    "separator": " ",
+    "color": "green"
   },
-
   "modules": [
     "break",
-
     {
       "type": "custom",
-      "format": "\u001b[38;5;253m ╔\u001b[38;5;178m✦\u001b[0m \u001b[1;38;5;255m2B · YoRHa No.2 Type B\u001b[0m \u001b[38;5;178m✦\u001b[38;5;253m╗\u001b[0m"
+      "format": "\u001b[38;5;46m ╔✦ root@matrix ✦╗"
     },
     {
       "type": "custom",
-      "format": "\u001b[38;5;253m ╚\u001b[38;5;240m══════════════════════\u001b[38;5;253m╝\u001b[0m"
+      "format": "\u001b[38;5;46m ╚═══════════════╝"
     },
-
     "break",
-
     {
       "type": "custom",
-      "format": "\u001b[38;5;253m ┌\u001b[38;5;178m✦\u001b[0m \u001b[1;38;5;255mSYSTEM\u001b[0m \u001b[38;5;253m──────┐\u001b[0m"
+      "format": "\u001b[38;5;46m ┌✦ SYSTEM ──────┐"
     },
     {
       "type": "user",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;255m\u001b[0m user  "
+      "key": "\u001b[38;5;46m │ user  "
     },
     {
       "type": "os",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;178m󰣇\u001b[0m os    "
+      "key": "\u001b[38;5;46m │ 󰣇 os    "
     },
     {
       "type": "kernel",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;255m\u001b[0m kern  "
+      "key": "\u001b[38;5;46m │ kern  "
     },
     {
       "type": "uptime",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;178m\u001b[0m up    "
+      "key": "\u001b[38;5;46m │ up    "
     },
     {
       "type": "wm",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;255m\u001b[0m wm    "
+      "key": "\u001b[38;5;46m │ wm    "
     },
     {
       "type": "shell",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;178m\u001b[0m shell "
+      "key": "\u001b[38;5;46m │ shell "
     },
     {
       "type": "packages",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;255m\u001b[0m pkgs  "
+      "key": "\u001b[38;5;46m │ pkgs  "
     },
     {
       "type": "custom",
-      "format": "\u001b[38;5;253m ├\u001b[38;5;178m✦\u001b[0m \u001b[1;38;5;255mHARDWARE\u001b[0m \u001b[38;5;253m────┤\u001b[0m"
+      "format": "\u001b[38;5;46m ├✦ HARDWARE ────┤"
     },
     {
       "type": "cpu",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;178m\u001b[0m cpu   "
+      "key": "\u001b[38;5;46m │ cpu   "
     },
     {
       "type": "gpu",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;255m󱤓\u001b[0m gpu   "
+      "key": "\u001b[38;5;46m │ 󱤓 gpu   "
     },
     {
       "type": "memory",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;178m\u001b[0m ram   "
+      "key": "\u001b[38;5;46m │ ram   "
     },
     {
       "type": "disk",
-      "key": "\u001b[38;5;253m │\u001b[0m \u001b[38;5;255m\u001b[0m disk  "
+      "key": "\u001b[38;5;46m │ disk  "
     },
     {
       "type": "custom",
-      "format": "\u001b[38;5;253m └──────────────────────┘\u001b[0m"
+      "format": "\u001b[38;5;46m └──────────────────────┘\u001b[0m"
     },
-
     "break",
-
     {
       "type": "colors",
-      "symbol": "circle",
-      "paddingLeft": 1
+      "symbol": "block"
     },
-
     "break"
   ]
 }
